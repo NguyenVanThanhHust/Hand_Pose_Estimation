@@ -15,6 +15,9 @@ from solver import make_optimizer
 from utils.logger import setup_logger
 
 def train(cfg):
+    train_loader = make_data_loader(cfg, split="train")
+    val_loader = make_data_loader(cfg, split="test")
+
     model = build_model(cfg)
     device = cfg.MODEL.DEVICE
 
@@ -22,9 +25,6 @@ def train(cfg):
     scheduler = None
 
     arguments = {}
-
-    train_loader = make_data_loader(cfg, split="train")
-    val_loader = make_data_loader(cfg, split="test")
 
     loss_fn = build_loss(cfg)
 

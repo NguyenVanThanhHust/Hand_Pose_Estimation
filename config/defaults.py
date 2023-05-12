@@ -25,7 +25,10 @@ _C.MODEL.NUM_CLASSES = 1
 # -----------------------------------------------------------------------------
 _C.INPUT = CN()
 # Size of the image during training
-_C.INPUT.FOLDER = "../crack_segmentation_dataset"
+_C.INPUT.TYPE = "synthetic"
+
+# Size of the image during training
+_C.INPUT.FOLDER = "../Datasets/CMU_Hand_Dataset/"
 # Size of the image during training
 _C.INPUT.SIZE_TRAIN = 448
 # Size of the image during test

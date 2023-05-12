@@ -1,1 +1,1 @@
-from .crack_dataset import CrackDataset
+from .cmu_hand_dataset import CMU_Hand_Dataset

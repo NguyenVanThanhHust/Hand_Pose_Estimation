@@ -9,8 +9,8 @@ from albumentations.pytorch import ToTensorV2
 from torchvision import datasets, transforms
 from torch.utils.data import Dataset, DataLoader
 
-def build_transforms(cfg, is_train=True):
-    if is_train:
+def build_transforms(cfg, split="train"):
+    if split=="train":
         transform = A.Compose(
             [
                 A.Resize(cfg.INPUT.SIZE_TRAIN, cfg.INPUT.SIZE_TRAIN),
@@ -18,7 +18,6 @@ def build_transforms(cfg, is_train=True):
                 A.RGBShift(r_shift_limit=25, g_shift_limit=25, b_shift_limit=25, p=0.5),
                 A.RandomBrightnessContrast(brightness_limit=0.3, contrast_limit=0.3, p=0.5),
                 A.Normalize(mean=cfg.INPUT.PIXEL_MEAN, std=cfg.INPUT.PIXEL_STD),
-
                 ToTensorV2(),
             ]
         )

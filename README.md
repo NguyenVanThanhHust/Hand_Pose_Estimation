@@ -1,4 +1,12 @@
-# Template
-This template is partly copied from [Deep-Learning-Project-Template](https://github.com/L1aoXingyu/Deep-Learning-Project-Template/)
+# Hand Pose Estimation
+This project is where I implement what [I learn]() about hand pose estimation. 
 
-Base project in here is crack segmentation, with dataset from [crack_segmentation](https://github.com/khanhha/crack_segmentation)
+## Usage
+
+### Installation
+### Training
+To train, run
+```
+python train.py --config_file ./configs/baseline.yaml
+``` 
+### Testing
