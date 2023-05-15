@@ -1,8 +1,8 @@
-from .unet import Crack_Unet
+from .unet import PoseUnet
 from .loss import bce_loss
 
 def build_model(cfg):
-    model = Crack_Unet(num_class=cfg.MODEL.NUM_CLASSES)
+    model = PoseUnet(num_class=cfg.MODEL.NUM_CLASSES)
     return model
 
 def build_loss(cfg):

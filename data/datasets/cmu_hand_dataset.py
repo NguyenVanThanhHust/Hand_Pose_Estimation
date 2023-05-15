@@ -49,7 +49,6 @@ class CMU_Hand_Dataset(Dataset):
         return len(self.im_paths)
 
     def __getitem__(self, idx):
-        import pdb; pdb.set_trace()
         file_name = self.im_names[idx]
         img_path = join(self.im_folder, file_name)
         mask_path = join(self.mask_folder, file_name)

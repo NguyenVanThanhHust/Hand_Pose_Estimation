@@ -10,3 +10,7 @@ To train, run
 python train.py --config_file ./configs/baseline.yaml
 ``` 
 ### Testing
+
+## TODO
+- [ ] detect hand model
+- [ ] estimate hand pose from raw image
