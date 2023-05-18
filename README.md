@@ -12,5 +12,6 @@ python train.py --config_file ./configs/baseline.yaml
 ### Testing
 
 ## TODO
+- [ ] Vgg Baseline model
 - [ ] detect hand model
 - [ ] estimate hand pose from raw image
